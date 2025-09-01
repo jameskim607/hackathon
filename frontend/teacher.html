@@ -1,0 +1,108 @@
+<!-- frontend/teacher.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Portal - African LMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>African LMS - Teacher Portal</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="teacher.html" class="active">For Teachers</a></li>
+                    <li><a href="student.html">For Students</a></li>
+                    <li id="login-link"><a href="#" onclick="showLogin()">Login</a></li>
+                    <li id="register-link"><a href="#" onclick="showRegister()">Register</a></li>
+                    <li id="profile-link" style="display: none;"><a href="#" onclick="showProfile()">Profile</a></li>
+                    <li id="logout-link" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="teacher-hero">
+            <h2>Share Your Knowledge</h2>
+            <p>Upload educational resources to help students across Africa</p>
+        </section>
+
+        <section id="upload-section" style="display: none;">
+            <h2>Upload Resource</h2>
+            <form id="upload-form">
+                <div class="form-group">
+                    <label for="resource-title">Title:</label>
+                    <input type="text" id="resource-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-description">Description:</label>
+                    <textarea id="resource-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resource-file">File:</label>
+                    <input type="file" id="resource-file" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-type">File Type:</label>
+                    <select id="resource-type" required>
+                        <option value="pdf">PDF</option>
+                        <option value="video">Video</option>
+                        <option value="text">Text</option>
+                        <option value="slides">Slides</option>
+                        <option value="link">Link</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="resource-subject">Subject:</label>
+                    <input type="text" id="resource-subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-grade">Grade Level:</label>
+                    <input type="text" id="resource-grade" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-country">Country:</label>
+                    <input type="text" id="resource-country" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-language">Language:</label>
+                    <input type="text" id="resource-language" value="en" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-tags">Tags (comma separated):</label>
+                    <input type="text" id="resource-tags">
+                </div>
+                <button type="submit" class="btn btn-primary">Upload Resource</button>
+            </form>
+        </section>
+
+        <section id="my-resources" style="display: none;">
+            <h2>My Resources</h2>
+            <div id="teacher-resources" class="resource-grid">
+                <!-- Teacher's resources will be loaded here -->
+            </div>
+        </section>
+
+        <section id="teacher-login-prompt">
+            <h2>Teacher Access</h2>
+            <p>Please login or register as a teacher to upload resources.</p>
+            <div class="auth-buttons">
+                <button onclick="showLogin()" class="btn btn-primary">Login</button>
+                <button onclick="showRegister()" class="btn btn-secondary">Register</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 African LMS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/teacher.js"></script>
+</body>
+</html>

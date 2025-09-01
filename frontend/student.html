@@ -1,0 +1,85 @@
+<!-- frontend/student.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - African LMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>African LMS - Student Portal</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="teacher.html">For Teachers</a></li>
+                    <li><a href="student.html" class="active">For Students</a></li>
+                    <li id="login-link"><a href="#" onclick="showLogin()">Login</a></li>
+                    <li id="register-link"><a href="#" onclick="showRegister()">Register</a></li>
+                    <li id="profile-link" style="display: none;"><a href="#" onclick="showProfile()">Profile</a></li>
+                    <li id="logout-link" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="student-hero">
+            <h2>Access Learning Resources</h2>
+            <p>Find educational materials that work with your connectivity</p>
+        </section>
+
+        <section class="search-section">
+            <h2>Search Resources</h2>
+            <form id="search-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="search-query">Search:</label>
+                        <input type="text" id="search-query" placeholder="Enter keywords">
+                    </div>
+                    <div class="form-group">
+                        <label for="search-subject">Subject:</label>
+                        <input type="text" id="search-subject" placeholder="e.g. Mathematics">
+                    </div>
+                    <div class="form-group">
+                        <label for="search-grade">Grade Level:</label>
+                        <input type="text" id="search-grade" placeholder="e.g. Primary">
+                    </div>
+                    <div class="form-group">
+                        <label for="search-country">Country:</label>
+                        <input type="text" id="search-country" placeholder="e.g. Nigeria">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </section>
+
+        <section class="resources">
+            <h2>Available Resources</h2>
+            <div id="resources-list" class="resource-grid">
+                <!-- Resources will be loaded here -->
+            </div>
+        </section>
+
+        <section class="ussd-info">
+            <h2>Access via USSD</h2>
+            <p>Don't have internet? Access resources using USSD:</p>
+            <div class="ussd-instructions">
+                <p>1. Dial *384*456# on your phone</p>
+                <p>2. Follow the menu prompts to browse resources</p>
+                <p>3. Get resources via SMS or listen to audio summaries</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 African LMS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/student.js"></script>
+</body>
+</html>
